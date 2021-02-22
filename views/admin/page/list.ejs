@@ -1,0 +1,30 @@
+<% include ../includes/header %>
+
+
+<div class="row">
+    <div class="col-md-4">
+      <% include ../includes/side %>
+    </div>
+  <div class="col-md-8">
+     
+     
+     
+     
+ <a href="/admin/page/add" class="btn btn-success">Add new</a>
+<hr>     
+     
+<% pages.forEach(function(page, index) { %>
+<p>
+<%- page.title -%> | <a href="/admin/page/edit/<%- page._id -%>">edit</a> | <a href="/admin/page/delete/<%- page._id -%>">delete</a>
+</p>
+
+<% })  %>
+     
+     
+     
+     
+     
+  </div>
+</div>
+
+<% include ../includes/footer %>
